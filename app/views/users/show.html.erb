@@ -1,0 +1,13 @@
+<h1><%= @user.name %> </h1>
+
+<% if @user.admin %>
+	ADMIN
+<% else %>
+	GUEST
+<%end%>
+
+<p>Mood: <%= @user.mood %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Height: <%= @user.height %></p>
+
+<%= @user.rides.last.take_ride_msg if @user.rides.size > 0 %>
